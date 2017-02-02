@@ -1,0 +1,26 @@
+World:
+	Plantae:
+		Species:
+			Props
+			name (may be NULL)
+			short unsigned int species (will be indexed by this value in Plantae)
+
+
+	Animalia:
+		Struct unclear
+		animals know where they are,
+		and can take actions against the board.
+		probably on a different timer loop than plants.
+		players maybe control these guys.
+
+Plant representation is dense (one cell per [x,y] pair in the CA)
+Animal representation is sparse.
+Reasoning?  Plants need lots of information about their neighbors all the time,
+plant cells don't move
+
+Animals move, and may share [x,y] pairs with plants.  
+
+Did this strategy pay off?
+Yes     [ ]
+No      [ ]
+!@#!$@  [ ]

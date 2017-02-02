@@ -1,0 +1,50 @@
+Need:
+	Water diffuses in ground slowly
+	but seeks its own level quickly
+
+	Ground falls like you'd expect.
+
+	Erosion tends to level the landscape
+	
+	Fast
+
+First shot:
+
+Rules:
+	Water never moves to a tile with more water than it
+	Water moving through ground has a chance to move the ground with it.
+
+Implementation:
+	Select candidate destinations
+	choose randomly between them
+	if the water is moving from ground to air
+	roll to see if the ground moves.
+	
+	repeat until no water in tile.
+Problems:
+	Doesn't address diffusion in ground.
+
+
+Second shot:
+
+Rules:
+	Water on/in the ground never moves to a tile with more water than it.
+	Water on the ground moves in the direction of the local minimum.
+
+	water may move from air to ground, taking turns proportional
+	to the difference in their water contents and the to do so
+        (need a counter).
+	
+	iff the water level of a ground tile is high enough, water in that
+	tile may move, but may bring the ground tile with it.
+
+	Water in the ground moves randomly, but respecting previous rules.
+
+Problems:
+	How to find local minimum.
+	
+	
+
+	
+	
+	

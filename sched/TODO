@@ -1,0 +1,49 @@
+Menu:
+
+
+Sanity:
+#DONE#	create some make targets 
+	Check for leaks
+#DONE#	Be careful loading .bonsai, check in home directory,
+#DONE#	create .bonsai if it isn't around.
+	save rand seed
+
+Features:
+	Refactoring:
+		Display loop needs to be rewritten from scratch
+
+	Time:
+		make game real-time:
+		     start with 1 tick per minute, see how that works
+		make the light source move in real-time
+
+	Cuts:
+
+
+	Misc:
+		
+		
+		     
+		
+
+	Graphics:
+		A pretty sun
+		A nice moon
+		stars
+		grass
+
+
+
+	Fruit:
+
+
+	Crows:
+	
+
+
+	Genes:
+
+
+Efficiency:
+	Compress state
+	stop saving after every turn?

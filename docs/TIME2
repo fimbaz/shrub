@@ -1,0 +1,54 @@
+| Feature                                           | EST |
+|---------------------------------------------------+-----|
+| Proper decay data structure                       | O   |
+| Decay into ground w/ phases,closing nutrient loop | O   |
+| Decay in color                                    | XX  |
+|                                                   |     |
+|                                                   |     |
+
+
+Branch Bond arrangements:
+(U)nderscore
+(D)ownward slash
+(B)ackslash
+(F)orward slash
+UD 
+UB 
+UF
+DB
+BF
+
+Underscore:
+
+
+
+
+DB
+
+BD1 C5
+\
+|
+
+BD2 C1
+ \
+|
+
+BD3 C6
+|\
+
+
+BD4 C4
+|
+ \ 
+
+BD5 C5
+|
+\
+
+BD6 C1
+ |
+\
+
+
+BD7 C6
+\|

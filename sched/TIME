@@ -1,0 +1,25 @@
+| Gene viewer                                                                           |   |   |
+| Generation simulator                                                                  |   |   |
+| Command line version of simulator                                                     |   |   |
+| Start using 10 tissue types, add evolution type and friends to genetic model          |   |   |
+| Simplify nutrient model, slow down underground water movement, stop nutrient movement |   |   |
+| Increase starting resources available to plants                                       |   |   |
+| Create seed tissue type                                                               |   |   |
+| Separate plant and environment concerns, to speed up simulation                       |   |   |
+| Evaluate plants in own loop, on tree-order (bfs? dfs?)                                |   |   |
+| Floaties themselves damp wind                                                         |   |   |
+| Plants love floaties                                                                  |   |   |
+| 1st class floaties                                                                    |   |   |
+Floaties can:
+thrust
+damp
+pew
+
+Floaties have:
+water		<- damp
+hummus		<- thrust
+photosynthate	<- pew
+
+can thrust and pew in any direction,
+damping for an amt.  
+A floatie's water,hummus, and photosynthate values are floats (duh)

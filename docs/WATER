@@ -1,0 +1,50 @@
+---3/21---
+New rule: 
+Water won't move to wetter tiles unless they're downhill.
+Water moves randomly in the ground, and in the air just above the ground.
+
+
+DONE:
+X- free Water comes from y=0 and propagates downward in air.
+X- If it is not absorbed by a plant cell, it passes through*.
+X- A plant cell may bind up to one unit of water per turn. 
+X- Plant tissues can hold a certain amount of bound water**.
+
+
+TODO:
+X- One unit of bound water is required to produce one unit of photosynthate.  
+Bracketed features are optional/difficult/advanced
+Advanced mechanics:
+[X- A tile can hold a maximum of X units of free water, and is saturated at that point]
+[O- Saturated free water on a ground/air border moves toward a local minimum]
+XX- free Water diffuses underground
+[X- free Water takes a unit of underground resource with it when it moves (if available).]
+Tentative/Experimental:
+[OO- Saturated in air may displace its nearest ground tile, severely damaging the cell there]
+[O- Water leaving a tile damages cells in the tile]
+[X- A cell that holds zero units of bound water will quickly die (once death is a thing).]
+
+
+Expected time to implement all features:
+OOOOOO
+
+Expected time to implement basic features:
+OO
+
+
+
+*Adhesion may be an interesting phenomenon-- might be fun to let different plants have different adhesion factors, and watch
+water walk around on their surfaces, but this isn't a high priority
+
+**possibilities here:  
+-let plant tissues hold as much water as they want, but cause them to take damage if they hold too much (requires damage implementation)
+-Fix max holding capacity on a per-tissue basis (this isn't ideal-- we prefer adaptive tradeoffs if possible, but would serve for a first pass).
+
+***exact mechanism unknown, and will require some experimentation.  Ideas:
+-Random distribution (too slow!)
+-Each cell gives 1/8 of its nutrients to each neighbor every turn (is this really different from random?)
+
+****think about erosion.  Perhaps water moving from a ground tile may take the ground with it?  What about deep underground?  Too much moving water causes damage?
+
+
+

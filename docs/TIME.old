@@ -1,0 +1,55 @@
+| Features            | EST |   |   |   |
+|---------------------+-----+---+---+---|
+| reimplement cutting | XX  |   |   |   |
+
+Sat Eve:
+| Perlin-noise based landscape, basic                                 | OXX  |   |   |   |
+
+| Take a swipe at evaporation/water cycle                             | XX   |   |   |   |
+| Line-by-line code review, comment/cleanup/kill lines                | OX   |   |   |   |
+| First pass at plant damage                                          | O    |   |   |   |
+| Creation and germination of seeds + interface                       | O    |   |   |   |
+| Species creation interface,basic                                    | OOOO |   |   |   |
+| Plant competition arena, first draft                                | OOO  |   |   |   |
+| Nice model of tissue death/disintegration                           | OOO  |   |   |   |
+| Create 3 new species                                                | OXX  |   |   |   |
+| Create world function with perlin noise and new species             | XX   |   |   |   |
+| World serialization, ad hoc                                         | OOO  |   |   |   |
+| Fold in one for loop                                                | O    |   |   |   |
+| recreate the desert palm                                            | OXX  |   |   |   |
+| Document 5 Git tips                                                 | XX   |   |   |   |
+| Make dates uniform in this document                                 | XX   |   |   |   |
+| Add per-plant statistics                                            | XX   |   |   |   |
+| Make erosion more sensible                                          | XXX  |   |   |   |
+| Speed up water processing by an order of magnitude                  | XX   |   |   |   |
+
+
+ 
+| Complete                                                               | EST | ACT  | S                | F                |
+|------------------------------------------------------------------------+-----+------+------------------+------------------|
+| Debug display function, make sure it works with Species-specfic colors | XX  |      |                  |                  |
+| Get directed nutrient movement working properly                        | XXX | OOXX | 10:26 PM         | 1:00 AM          |
+| Perf test redistribute_nutrients implementation                        | XX  | X    | 1:15 AM          | 1:21 PM          |
+| Increase speed of redistribute_nutrients                               | OO  | OO   | 11:15 PM 3-16-14 | 1:12 AM          |
+| Create this document                                                   | X   |      | 11PM 3-16-14     | 11:15 PM 3-16-14 |
+| Choose nice default set of plant colors                                | X   | X    | 1:22 AM          | 1:25             |
+| Improve the format of this document (multi-lines per column)           | X   | X    | 4:00 AM          | 4:15 AM          |
+| Debug menu, basic                                                      | OXX | OX   | 12:51            | 2:07             |
+| Design new resource: water                                             | XX  | XX   | 3:00PM           | 3:35             |
+| Reformulate water rules                                                | XX  | XX   | 1:54             | 2:20             |
+| Begin basic water implementation                                       | O   | O    | 6:27PM           | 7:30 PM          |
+| First cut at full water implementation                                 | OO  | OO   | 8PM              | 10PM             |
+| Advanced water implementation:movement on ground                       | OO  | OXXX | 2:21 PM          |                  |
+| Fix oversaturation of ground tiles                                     | X   | OO   | 12:49 PM         | ehh              |
+| Fix weird nutrients bug                                                | OO  | OOOO |                  |                  |
+
+ Learned: put <N> in a new row to size it.  You can't really do multi-line columns :(
+
+*learn better emacs
+*
+*
+
+
+photosynthate should require a unit of water to produce...
+
+ 

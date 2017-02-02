@@ -1,0 +1,20 @@
+Tabular stream of dismissable/mouseover  of enlargeable images
+rated by view-time
+
+Workflow:
+drag cursor around, linger over content you like.  Images move from right to left, may be grouped.
+Use webGL?
+
+Interactions:
+Dismiss
+move
+group
+optionally label
+view labelled pictures in blob world (fullscreen available from there)
+
+thoughts:
+undismissed, ungrouped, unarchved picture follow your cursor around like lost puppies?
+Or march toward the past-- grouped/favorite pictures fall off the bottomish leftish into a trough?
+
+or ignored images shrink into oblivion.  Teeny world for infinitesimal images (trash) where they can be deleted.
+Potential for human-assisted dup detection mode using simple computer vision.

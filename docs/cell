@@ -1,0 +1,48 @@
+Cell object
+ // properties
+ resource (integer)
+ neighbours[8] (Cells)
+ occupant (Module)
+Plant Module object
+ // properties
+ photosynthate (integer)
+ nutrients (integer)
+ parent (Module)
+ offspring[2] (Module)
+ home (Cell)
+Experiment object
+ // properties
+ grid [64][64] Cell
+ plantModules (arrayList)Modules
+// iterative code
+For each cell of the array:
+ If below ground cell:
+  randomly distribute resources between self and eight
+   neighbours.
+ If above ground cell:
+  move light resource to cell immediately below self.
+For each plant module:
+ // Resource uptake
+ If resource is available from within occupied (home) cell
+  take up unit of resource from occupied cell
+   if below ground resource
+    add to nutrient variable
+   if above ground resource
+    add to photosynthate variable
+ Randomly redistribute nutrient and photosynthate between
+  self, parent and potential offspring modules
+ // Growth
+ If an offspring node is empty
+  If a unit of nutrient and photosynthate available
+   If more than one cell neighbouring the occupying
+    cell is empty
+   choose most resource rich
+   create new plant module
+   reduce nutrient and photosynthate values by one
+   set the offspring node to newly created module
+   set parent node of newly created module to current
+    module
+   set occupancy of chosen neighbouring cell to be
+    newly created module
+   set the occupied cell of newly created module to
+    that of chosen neighbouring cell
