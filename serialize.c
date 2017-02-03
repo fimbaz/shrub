@@ -20,7 +20,7 @@ int save_named_genomes(World*world,char*file){
       return errno;
     }
   for(int i=1;i<world->max_species_id;i++){
-    if(world->genomes[i].name != NULL){
+    if(world->genomes[i].name[0] != '\0'){
       if(write(f,(void*)&world->genomes[i],sizeof(Genome)) == -1){
 	return errno;
       }

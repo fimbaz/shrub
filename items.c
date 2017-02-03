@@ -1,7 +1,7 @@
 #include "items.h"
 #include <stdlib.h>
 #include <string.h>
-Item MOTE = {0,10,{0,0,0},'*',FLOATY,0,0,.00056};
+Item MOTE = {0,10,{0,0,0},'*',FLOATY,0,0,20};
 uint total_items(CA*ca){
   uint total = 0;
   for(int i=0;i<ca->ys;i++){

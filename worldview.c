@@ -358,7 +358,7 @@ void act_worldview(Worldview_State* ws,int input){
   //  if(input == 'F')
   //    make_floaty(ca,ws->c.y+ws->v.y,ws->c.x+ws->v.x);
   if(input == 'D')
-      kill(ca,ws->c.y+ws->v.y,ws->c.x+ws->v.x);
+      kill_branch(ca,ws->c.y+ws->v.y,ws->c.x+ws->v.x);
 }
 char* pump_worldview(PANEL* panel,Worldview_State* ws){
   CA* ca = ws->ca;

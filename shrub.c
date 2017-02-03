@@ -297,7 +297,7 @@ uint new_perlin_zone(uint y,uint x,double f,double a,uint dc,uint bheight,uint t
     }}
   perlin_init();
   for(int j=0;j<ca->xs;j++){
-    uint ground_level =dc + (uint)abs(round(a*noise1(j*f)));
+    uint ground_level =dc + (uint)fabs(round(a*noise1(j*f)));
     for(int i=ground_level < ca->ys-bheight ? ground_level : ca->ys-bheight;i<ca->ys;i++){
       ca->new[i][j].substrate_type = GROUND;
       ca->old[i][j].substrate_type = GROUND;
@@ -1054,13 +1054,11 @@ void transform(CA*ca){
       Tissue* t = get_tissue(ca,V->species_id,V->tissue_id);
       if(t == NULL)
 	continue;
-      if(t->evolve_type == NONE)
-	continue;
       uint dist = longest_dist_to_edge(ca,i,j);
-      if(dist >= t->evolve_threshold[0])
+      if(dist >= t->evolve_threshold[0] && t->evolve_type[0] != NONE)
 	V->tissue_id = t->evolve_type[0];
       dist = longest_dist_to_sprout(ca,i,j);
-      if(dist > t->evolve_threshold[1]){
+      if(dist > t->evolve_threshold[1] && t->evolve_type[1] != NONE){
 	V->tissue_id = t->evolve_type[1];
       }
     }}

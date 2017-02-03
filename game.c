@@ -62,7 +62,7 @@ void act_game(Worldview_State*ws,int input){
     seed_id = (seed_id%DIVERSITY)+1;
     create_item(ws->ca,ws->c.y+ws->v.y,ws->c.x+ws->v.x,&SAMPLE_SEED[seed_id]);
   }if(input == 'd'){
-    kill(ws->ca,ws->c.y+ws->v.y,ws->c.x+ws->v.x);
+    kill_branch(ws->ca,ws->c.y+ws->v.y,ws->c.x+ws->v.x);
   }if(input >= '0' && input <= '9'){
     ws->minor_mode = input - '0';
   }
