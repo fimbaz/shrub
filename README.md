@@ -1,5 +1,5 @@
-#shrub 
-###shrub is a TUI pet plant simulator currently featuring
+# shrub 
+### shrub is a TUI pet plant simulator currently featuring
 - water
 - wind
 - dirt
@@ -12,22 +12,25 @@
 - decay
 
 Controls:
-hjkl <- move cursor
-HJKL <- jump cursor
-s    <- plant seed @ cursor
-d    <- cut plant
-0..6 <- resource view
+- hjkl <- move cursor
+- HJKL <- jump cursor
+- s    <- plant seed @ cursor
+- d    <- cut plant
+- 0..6 <- resource view
 
 Interesting things:
--Male flowers are pink
--female flowers are purple
--pollen is '.'
--new seeds are usually '&'
+- Male flowers are pink
+- female flowers are purple
+- pollen is '.'
+- new seeds are usually '&'
 
 
 Known limitations:
--no saving
--friggin C
--limited UI
--may segfault with certain libc
+- no saving
+- friggin C
+- limited UI
+- may segfault with certain libc
+
+Helpful hints:
+- Shrub was designed for xterm-256color
 
