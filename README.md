@@ -1,14 +1,15 @@
-# shrub is a TUI pet plant simulator currently featuring
--water
--wind
--dirt
--plants
--pollen
--seeds
--genes
--reproduction 
--death
--decay
+#shrub 
+###shrub is a TUI pet plant simulator currently featuring
+- water
+- wind
+- dirt
+- plants
+- pollen
+- seeds
+- genes
+- reproduction 
+- death
+- decay
 
 Controls:
 hjkl <- move cursor
