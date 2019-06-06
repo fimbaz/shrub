@@ -30,8 +30,8 @@ World* new_game(){
   srand(time(NULL));
   init_sample_run(&e1,&g1);
   World* world		= create_world(&e1);
-  uint   cays		= 100;
-  uint   caxs		= 300;
+  uint   cays		= 200;
+  uint   caxs		= 800;
   float  freq		= .003;
   float  amp		= 220;
   uint   offset		= 60;
@@ -74,8 +74,8 @@ int main(){
   CA* ca              = &world->zones[0];
   Worldview_State* ws = calloc(1,sizeof(Worldview_State));
   ws->ca = ca;
-  ws->c.y = 100;
-  ws->c.x = 100;
+  ws->c.y = 10;
+  ws->c.x = 10;
   while(1){
     int input = getch();
     getmaxyx(panel_window(worldview),ws->v.ys,ws->v.xs);

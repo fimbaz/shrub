@@ -1,7 +1,7 @@
 CC=gcc
-CFLAGS=-Wall -Werror -Wno-missing-braces -std=gnu99 -m32 -I.
+CFLAGS=-Wall -Werror -Wno-missing-braces -std=gnu99  -I.
 SHRUB_DEPS= shrub.c  genome.c perlin.c roulette.c serialize.c worldview.c game.c items.c
-SHRUB_LIBS= -lncurses -lpanel -lm -lmenu -lform
+SHRUB_LIBS= -lncurses -lpanel -lm -lmenu -lform -ltinfo
 fast: $(SHRUB_DEPS) TAGS
 	$(CC) $(CFLAGS) -o shrub $(SHRUB_DEPS) $(SHRUB_LIBS) -O3
 TAGS: $(SHRUB_DEPS)
