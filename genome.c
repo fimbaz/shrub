@@ -172,6 +172,7 @@ int init_sample_run(Experiment* e1,Genome* gs){
     ALL(gs,flux_cost,.1);
     ALL(gs,initial_flux,100);
     ONE(gs,flux_cost[LEAF],1);
+    ONE(gs,flux_cost[ROOT],2);
     ALL(e1,decay_rate,100);
     //ONE(gs,flux_cost[SHOOT],1);
     memset(gs->name,0,sizeof(gs->name));
