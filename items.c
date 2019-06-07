@@ -47,6 +47,7 @@ int create_item(CA*ca,uint y,uint x,Item*new){
     for(old = ca->new[y][x].items;old->next != NULL;old = old->next) counter++;
     old->next = item;
   }
+  item->next = NULL;
   return counter;
 }
 void delete_item(CA*ca,uint y,uint x,uint pos){

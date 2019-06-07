@@ -30,8 +30,8 @@ World* new_game(){
   srand(time(NULL));
   init_sample_run(&e1,&g1);
   World* world		= create_world(&e1);
-  uint   cays		= 200;
-  uint   caxs		= 800;
+  uint   cays		= 30;
+  uint   caxs		= 30;
   float  freq		= .003;
   float  amp		= 220;
   uint   offset		= 60;
@@ -45,10 +45,10 @@ World* new_game(){
  SAMPLE_SEED[0].mass = .0087;
  SAMPLE_SEED[0].fg_color = 18;
  SAMPLE_SEED[0].size = 100;
- for(int i=1;i<=DIVERSITY;i++){
+ for(int i=0;i<=DIVERSITY;i++){
    memcpy(&SAMPLE_SEED[i],&SAMPLE_SEED[0],sizeof(Item));
  }
- for(int i=1;i<DIVERSITY;i++){
+ for(int i=0;i<DIVERSITY;i++){
    SAMPLE_SEED[i].item.species_id  = i;
  }
   return world;
@@ -59,7 +59,7 @@ void act_game(Worldview_State*ws,int input){
     timeout(1);
   }
   if(input == 's'){
-    seed_id = (seed_id%DIVERSITY)+1;
+    seed_id = (seed_id%10)+1;
     create_item(ws->ca,ws->c.y+ws->v.y,ws->c.x+ws->v.x,&SAMPLE_SEED[seed_id]);
   }if(input == 'd'){
     kill_branch(ws->ca,ws->c.y+ws->v.y,ws->c.x+ws->v.x);
