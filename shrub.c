@@ -441,27 +441,26 @@ void tick_flowers(CA*ca,uint y, uint x){
   }
   return;
 }
+int has_living_neighbors(CA*ca,uint y,uint x){
+  for (int i=0;i<10;i++){
+    int yc = y+1+YMAP[i];
+    int xc = x+XMAP[i];
+    if(in_bounds(ca,yc,xc) &&
+       ca->old[yc][xc].parent != SELF)
+      return 1;
+  }
+  return 0;
+}
+
 void tick_germinate(CA*ca,uint y,uint x){
   Cell* O = &ca->new[y][x];
   int pos = 0;
   Item*items;
   for(items = O->items;items != NULL;items = items->next){
     if(items->type == SEED){
-      if(!in_bounds(ca,y+1,x) || ca->old[y+1][x].substrate_type != GROUND)
+      if(!in_bounds(ca,y+1,x) || ca->old[y+1][x].substrate_type != GROUND
+	 || has_living_neighbors(ca,y+1,x))
 	return;
-      for(int i=0;i<10;i++){
-	for(int j=0;j<10;j++){
-	  if(ca->old[y+1+ YMAP[i] + YMAP[j]]
-	            [x+ XMAP[i] + XMAP[j]].parent
-	     != SELF || 
-	     ca->old[y+ YMAP[i] + YMAP[j]]
-	     [x+ XMAP[i] + XMAP[j]].parent != SELF
-	     ){
-	    return;
-	  }
-	}
-
-      }
       plant_seed(ca,items->item.species_id,y+1,x);
       delete_item(ca,y,x,pos);
       return;
