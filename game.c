@@ -29,9 +29,11 @@ World* new_game(){
   Genome g1;
   srand(time(NULL));
   init_sample_run(&e1,&g1);
+  int y,x;
+  getmaxyx(stdscr,y,x);
   World* world		= create_world(&e1);
-  uint   cays		= 30;
-  uint   caxs		= 30;
+  uint   cays		= y;
+  uint   caxs		= x;
   float  freq		= .003;
   float  amp		= 220;
   uint   offset		= 60;
