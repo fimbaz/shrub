@@ -14,4 +14,6 @@ typedef struct prop_pair {
 
 int save_genomes(World*world,char*file);
 int load_genomes(World* world,char*file);
+int load_default_game(World* world);
+int save_default_game(World* world);
 #endif

@@ -4,6 +4,8 @@ SHRUB_DEPS= shrub.c  genome.c perlin.c roulette.c serialize.c worldview.c game.c
 SHRUB_LIBS= -lncurses -lpanel -lm -lmenu -lform -ltinfo
 fast: $(SHRUB_DEPS) TAGS
 	$(CC) $(CFLAGS) -o shrub $(SHRUB_DEPS) $(SHRUB_LIBS) -O3
+serialize: $(SHRUB_DEPS) TAGS
+	$(CC) $(CFLAGS) -o serialize $(SHRUB_DEPS) $(SHRUB_LIBS) -DSERIALIZE_IS_MAIN -O3
 TAGS: $(SHRUB_DEPS)
 	etags --language=c -R *.c *.h
 debug: $(SHRUB_DEPS) TAGS

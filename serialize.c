@@ -8,9 +8,36 @@
 #include <arpa/inet.h>
 #include <unistd.h>
 #include <string.h>
+#include <stdlib.h>
 #include "serialize.h"
 static short unsigned int magic_number = 0x1EAF;
 static short unsigned int library_magic_number = 0xBEAF;
+
+int load_game(World* world,char* file){
+	return load_genomes(world,file);
+}
+
+int save_game(World* world,char* file){
+	return save_genomes(world,file);
+}
+
+
+int save_default_game(World* world){
+	char* home = getenv("HOME");
+	char * save_file_path = malloc(FILENAME_MAX);
+	snprintf(save_file_path,FILENAME_MAX,"%s/.shrub",home);
+	save_game(world,save_file_path);
+	free(save_file_path);
+	return 0;
+}
+int load_default_game(World* world){
+	char* home = getenv("HOME");
+	char * load_file_path = malloc(FILENAME_MAX);
+	snprintf(load_file_path,FILENAME_MAX,"%s/.shrub",home);
+	load_game(world,load_file_path);
+	free(load_file_path);
+	return 0;
+}
 
 int save_named_genomes(World*world,char*file){
   int f = open(file,O_WRONLY|O_CREAT|O_TRUNC,0600);
@@ -80,8 +107,6 @@ int load_genomes(World* world,char*file){
 
 #ifdef SERIALIZE_IS_MAIN
 int main(){
-  Plant* new_ex =
-  
   for(int i=0;i<500;i++){    
       tick_CA(new_ex);
   }

@@ -6,6 +6,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include <serialize.h>
+#include <unistd.h>
 #define DIVERSITY 200
 extern Item MOTE;
 Item SAMPLE_SEED[DIVERSITY+1];
